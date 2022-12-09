@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Practica IMCv3</string>
+    <string name="peso_inferior">Peso inferior al normal </string>
+    <string name="peso_normal">Normal </string>
+    <string name="sobrepeso">Sobrepeso </string>
+    <string name="vaciar_campos">Vaciar campos </string>
+    <string name="calcular">Calcular </string>
+    <string name="mujer">Mujer </string>
+    <string name="hombre">Hombre </string>
+    <string name="obesidad">Obesidad </string>
+    <string name="m">m</string>
+    <string name="kg">kg</string>
+    <string name="altura_m">Altura (m)</string>
+    <string name="peso_kg">Peso (kg)</string>
+    <string name="abrir_alert_dialog">Abrir Alert dialog</string>
+    <string name="dialog_title">Prueba de dialogo</string>
+    <string name="dialog_message">¿Deseas guardar la informacion obtenida para el historico?</string>
+    <string name="dialog_button_positive">Aceptar</string>
+    <string name="dialog_button_negative">Cancelar</string>
+    <string name="dialog_button_neutral">Neutral</string>
+    <string name="abrir_alert_dialog_list">Abrir alert dialog List</string>
+    <string name="toast_message">La ciudad seleccionada es %s</string>
+    <string name="dialog_multi_choice">dialog multi choice</string>
+    <string name="dialog_single_choice">dialog single choice</string>
+    <string name="password">Passsword</string>
+    <string name="userName">UserName</string>
+    <string name="custom_dialog">Custom Dialog</string>
+    <string name="time_picker_dialog">Time picker dialog</string>
+    <string name="date_picker_dialog">Date picker Dialog</string>
+</resources>

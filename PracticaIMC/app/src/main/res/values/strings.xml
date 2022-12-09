@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Practica IMC</string>
+    <string name="peso_inferior">Peso inferior al normal </string>
+    <string name="peso_normal">Normal </string>
+    <string name="sobrepeso">Sobrepeso </string>
+    <string name="vaciar_campos">Vaciar campos </string>
+    <string name="calcular">Calcular </string>
+    <string name="mujer">Mujer </string>
+    <string name="hombre">Hombre </string>
+    <string name="obesidad">Obesidad </string>
+    <string name="m">m</string>
+    <string name="kg">kg</string>
+    <string name="altura_m">Altura (m)</string>
+    <string name="peso_kg">Peso (kg)</string>
+
+</resources>

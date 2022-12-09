@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/peso_kg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/altura_m"
+        app:layout_constraintEnd_toStartOf="@+id/editTxtAltura"
+        app:layout_constraintTop_toTopOf="@+id/editTxtAltura" />
+
+    <EditText
+        android:id="@+id/editTxtPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="44dp"
+        android:autofillHints="@string/kg"
+        android:ems="10"
+        android:hint="@string/kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/editTxtAltura"
+        app:layout_constraintStart_toEndOf="@+id/txtPeso" />
+
+    <EditText
+        android:id="@+id/editTxtAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="48dp"
+        android:autofillHints="@string/m"
+        android:ems="10"
+        android:hint="@string/m"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReset"
+        app:layout_constraintStart_toStartOf="@+id/editTxtPeso"
+        app:layout_constraintTop_toTopOf="@+id/txtPeso" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="252dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="54dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTxtAltura">
+
+        <RadioButton
+            android:id="@+id/rbHombre"
+            android:layout_width="122dp"
+            android:layout_height="match_parent"
+            android:text="@string/hombre" />
+
+        <RadioButton
+            android:id="@+id/rbMujer"
+            android:layout_width="83dp"
+            android:layout_height="match_parent"
+            android:text="@string/mujer" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/calcular"
+        app:layout_constraintBottom_toTopOf="@+id/txtResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginBottom="43dp"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:textColor="@color/dark_grey"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtCategoria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReset" />
+
+    <TextView
+        android:id="@+id/txtCategoria"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vaciar_campos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

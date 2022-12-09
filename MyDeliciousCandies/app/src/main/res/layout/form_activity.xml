@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtCandyName"
+            android:layout_width="118dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="108dp"
+            android:text="Nombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTxtWeb"
+            android:layout_width="257dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Web"
+            android:inputType="textPersonName"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.246"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtWeb" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="109dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="27dp"
+            android:text="Fabricante"
+            app:layout_constraintEnd_toStartOf="@+id/editTxtFabricante"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtCandyName" />
+
+        <EditText
+            android:id="@+id/editTxtName"
+            android:layout_width="181dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="108dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.778"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/editTxtFabricante"
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="52dp"
+            android:ems="10"
+            android:hint="Fabricante"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtName" />
+
+        <TextView
+            android:id="@+id/txtTipo"
+            android:layout_width="107dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="25dp"
+            android:text="Tipo"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="192dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtFabricante">
+
+            <RadioButton
+                android:id="@+id/rbMasticable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masticable" />
+
+            <RadioButton
+                android:id="@+id/rbChicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chicle" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="94dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="38dp"
+            android:text="Formato"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="192dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.817"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtDulzor">
+
+            <RadioButton
+                android:id="@+id/rbIndvidual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Individual" />
+
+            <RadioButton
+                android:id="@+id/rbBolsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bolsa" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="93dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="44dp"
+            android:text="Crear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toEndOf="@+id/btnVerLista"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtWeb" />
+
+        <Button
+            android:id="@+id/btnVerLista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Ver Lista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.176"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtWeb" />
+
+        <TextView
+            android:id="@+id/txtWeb"
+            android:layout_width="177dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="52dp"
+            android:text="Pagina web del fabricante"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Nivel de Dulzor "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <EditText
+            android:id="@+id/editTxtDulzor"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="76dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="48dp"
+            android:autofillHints="0/5"
+            android:hint="0/5"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <ImageView
+            android:id="@+id/imgCandyA"
+            android:layout_width="97dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/btnAddPicA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="28dp"
+            android:text="Add pic"
+            app:layout_constraintStart_toEndOf="@+id/imgCandyA"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
