@@ -1,6 +1,9 @@
 package com.jpoveda.mydeliciouscandiesv2
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +14,7 @@ import com.jpoveda.mydeliciouscandiesv2.data.candy.Candy
 import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyFileDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyMockDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.ICandyDataSource
+import kotlinx.android.synthetic.main.candy_item_adapter.*
 import kotlinx.android.synthetic.main.candy_list_fragment.*
 
 class CandyItemListTab : Fragment() {
@@ -36,17 +40,22 @@ class CandyItemListTab : Fragment() {
     private fun loadView(candies: List<Candy> = dataSource.getList()) {
         val adapter = RecycleAdapter(requireContext(), candies)
         {
-            val frag = CandyItemFragment(dataSource, it)
-
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.viewPager, frag)
-            transaction?.addToBackStack(null)
-
-            transaction?.commit()
+            //goToDetail(it)
+            openWeb(candies.get(it).web)
         }
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
+    }
+
+    private fun goToDetail(position: Int) {
+        val frag = CandyItemFragment(dataSource, position)
+
+        val transaction = fragmentManager?.beginTransaction()
+        transaction?.replace(R.id.viewPager, frag)
+        transaction?.addToBackStack(null)
+
+        transaction?.commit()
     }
 
     fun setListener(){
@@ -54,6 +63,7 @@ class CandyItemListTab : Fragment() {
             if (radioFilterName.isChecked) filterByName()
             if (radioFilterSweetness.isChecked) filterBySweetness()
         }
+
     }
 
     private fun filterByName() {
@@ -65,5 +75,20 @@ class CandyItemListTab : Fragment() {
         val sortedItemsList = items.sortedBy { it.dulzor }.reversed()
         loadView(sortedItemsList)
     }
+
+    // Abrir una pagina WEB
+    private fun openWeb(url: String) {
+        val intent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse(url)
+        )
+
+        if (intent.resolveActivity(requireContext().packageManager) != null) {
+            startActivity(intent)
+        } else {
+            Log.d("DEBUG", "Hay un problema para encontrar un navegador.")
+        }
+    }
+
 }
 

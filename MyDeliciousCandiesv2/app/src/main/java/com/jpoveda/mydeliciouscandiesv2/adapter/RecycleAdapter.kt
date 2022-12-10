@@ -11,7 +11,6 @@ import com.jpoveda.mydeliciouscandiesv2.R
 import com.jpoveda.mydeliciouscandiesv2.data.candy.Candy
 import kotlinx.android.synthetic.main.candy_item_adapter.view.*
 
-
 interface OnItemClickListener {
     fun onItemClick(item: Candy)
 }
@@ -37,6 +36,7 @@ class RecycleAdapter(context: Context, items: List<Candy>, listener: ((position:
         val fabricanteView: TextView = view.txtFabricante
         val dulzorView: ProgressBar = view.progressBar2
         val tipoView: TextView = view.txtTipo
+        val webView: TextView = view.txtWeb
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -45,8 +45,10 @@ class RecycleAdapter(context: Context, items: List<Candy>, listener: ((position:
         holder.fabricanteView.text = item.fabricante
         holder.dulzorView.progress = item.dulzor
         holder.tipoView.text = item.tipo
+        holder.webView.text = item.web
 
-        holder.itemView.setOnClickListener(View.OnClickListener { listener.invoke(position) })
+        holder.webView.setOnClickListener(View.OnClickListener { listener.invoke(position) })
+        //holder.itemView.setOnClickListener(View.OnClickListener { listener.invoke(position) })
     }
 
     override fun onCreateViewHolder(
