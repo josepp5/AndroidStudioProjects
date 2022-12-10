@@ -14,7 +14,6 @@ import com.jpoveda.mydeliciouscandiesv2.data.candy.Candy
 import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyFileDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyMockDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.ICandyDataSource
-import kotlinx.android.synthetic.main.candy_item_adapter.*
 import kotlinx.android.synthetic.main.candy_list_fragment.*
 
 class CandyItemListTab : Fragment() {
@@ -64,6 +63,15 @@ class CandyItemListTab : Fragment() {
             if (radioFilterSweetness.isChecked) filterBySweetness()
         }
 
+        btnClearRadio.setOnClickListener{
+            clearRadioBtn()
+        }
+    }
+
+    private fun clearRadioBtn(){
+        radioFilterName.isChecked = false
+        radioFilterSweetness.isChecked = false
+        loadView(items)
     }
 
     private fun filterByName() {
@@ -76,13 +84,16 @@ class CandyItemListTab : Fragment() {
         loadView(sortedItemsList)
     }
 
+    private fun filterByFav(){
+        
+    }
+
     // Abrir una pagina WEB
     private fun openWeb(url: String) {
         val intent = Intent(
             Intent.ACTION_VIEW,
             Uri.parse(url)
         )
-
         if (intent.resolveActivity(requireContext().packageManager) != null) {
             startActivity(intent)
         } else {
