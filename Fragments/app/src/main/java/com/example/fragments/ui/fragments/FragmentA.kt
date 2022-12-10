@@ -15,7 +15,7 @@ class FragmentA : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Here is two ways of getting the info of the fragment
-        //name = savedInstanceState?.getString("name")
+        // name = savedInstanceState?.getString("name")
         // or
         arguments.let {
              name = it?.getString("name")

@@ -102,4 +102,15 @@
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/txtFabricante" />
 
+    <Button
+        android:id="@+id/btnModify"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Modificar"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxFav" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

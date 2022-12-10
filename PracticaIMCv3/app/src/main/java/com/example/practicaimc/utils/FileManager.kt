@@ -14,7 +14,6 @@ class FileManager {
                 it.write(fileContents.toString().encodeToByteArray())
             }
         }
-
         fun readFile(context: Context, fileName: String) : List<String>? {
             var list: MutableList<String> = ArrayList()
             context.openFileInput(fileName).bufferedReader().useLines { lines ->

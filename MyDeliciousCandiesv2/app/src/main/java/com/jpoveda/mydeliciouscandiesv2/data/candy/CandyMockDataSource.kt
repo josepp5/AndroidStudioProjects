@@ -1,6 +1,6 @@
 package com.jpoveda.mydeliciouscandiesv2.data.candy
 
-class CandyMockDataSource () : ICandyDataSource {
+class CandyMockDataSource() : ICandyDataSource {
     override fun getList(): List<Candy> {
         val items = ArrayList<Candy>()
         items.add(Candy("lenguas", "fini", 2, "Chicle", "Bolsa", "https://www.fiesta.es/producto/kojak"))

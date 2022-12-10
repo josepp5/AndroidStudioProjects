@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.jpoveda.mydeliciouscandiesv2.data.candy.Candy
 import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyFileDataSource
+import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyMockDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.ICandyDataSource
 import kotlinx.android.synthetic.main.form_activity.*
 
@@ -27,7 +28,7 @@ class CandyForm : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataSource = CandyFileDataSource(requireContext())
+        dataSource = CandyMockDataSource()
         setListener()
     }
 

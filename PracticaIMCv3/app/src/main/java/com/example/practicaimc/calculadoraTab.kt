@@ -72,8 +72,6 @@ class calculadoraTab : Fragment() {
             txtResultado.text = String.format("%.2f", resultado)
             val measurement = Measurement(date, sexo, resultado, rango, peso, altura)
             MakeDialog(measurement)
-            //items.add(measurement)
-            //dataSource.saveElement(items)
         }
     }
 

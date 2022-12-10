@@ -16,11 +16,11 @@ interface OnItemClickListener {
     fun onItemClick(item: Candy)
 }
 
-class RecycleAdapter(context: Context, items: List<Candy>, listener: ((item: Candy) -> Unit)) :
+class RecycleAdapter(context: Context, items: List<Candy>, listener: ((position: Int) -> Unit)) :
     RecyclerView.Adapter<RecycleAdapter.ViewHolder>() {
     var context: Context? = null
     var items: List<Candy>
-    val listener: ((item: Candy) -> Unit)
+    val listener: ((position: Int) -> Unit)
 
     init {
         this.context = context
@@ -37,8 +37,6 @@ class RecycleAdapter(context: Context, items: List<Candy>, listener: ((item: Can
         val fabricanteView: TextView = view.txtFabricante
         val dulzorView: ProgressBar = view.progressBar2
         val tipoView: TextView = view.txtTipo
-
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -48,7 +46,7 @@ class RecycleAdapter(context: Context, items: List<Candy>, listener: ((item: Can
         holder.dulzorView.progress = item.dulzor
         holder.tipoView.text = item.tipo
 
-        holder.itemView.setOnClickListener(View.OnClickListener { listener.invoke(item) })
+        holder.itemView.setOnClickListener(View.OnClickListener { listener.invoke(position) })
     }
 
     override fun onCreateViewHolder(
