@@ -2,14 +2,9 @@ package com.jpoveda.mydeliciouscandiesv2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.jpoveda.mydeliciouscandiesv2.adapter.RecycleAdapter
 import com.jpoveda.mydeliciouscandiesv2.adapter.ViewPagerAdapter
 import com.jpoveda.mydeliciouscandiesv2.data.candy.ICandyDataSource
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.candy_item_adapter.*
-import kotlinx.android.synthetic.main.candy_list_fragment.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
 
         // Se añaden los fragments y los títulos de pestañas.
-        adapter.addFragment(CandyItemListTab(), "CandyItemList")
+        adapter.addFragment(CandyItemListFragment(), "CandyItemList")
         adapter.addFragment(CandyForm(), "CandyForm")
 
         // Se asocia el adapter.

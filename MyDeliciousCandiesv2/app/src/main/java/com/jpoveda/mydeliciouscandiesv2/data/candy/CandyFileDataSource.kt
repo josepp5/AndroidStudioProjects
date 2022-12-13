@@ -1,9 +1,14 @@
 package com.jpoveda.mydeliciouscandiesv2.data.candy
 
 import android.content.Context
-import com.example.practicaimc.utils.FileManager
+import android.content.res.Resources
+import android.graphics.Bitmap
+import androidx.core.graphics.drawable.toDrawable
+import com.jpoveda.mydeliciouscandiesv2.utils.FileManager
+import java.io.File
 
 class CandyFileDataSource(context: Context) : ICandyDataSource {
+    val imagesName: String = "candy"
     val fileName = "candyList.txt"
     val context: Context = context
 
@@ -12,11 +17,20 @@ class CandyFileDataSource(context: Context) : ICandyDataSource {
         try {
             listResult = FileManager.readFile(context, fileName)
         } finally {
-            return listResult?.map { Candy.fromString(it) } ?: ArrayList()
+            return listResult?.map {
+                val candy = Candy.fromString(it)
+                val image = FileManager.getImage(context, imagesName + candy.id)
+                candy.image = image
+                candy
+            } ?: ArrayList()
         }
     }
+
     override fun saveElement(candies: List<Candy>) {
         val listOfStrings: List<String> = candies.map { it.toString() }
         FileManager.saveLinesInFile(context, fileName, listOfStrings)
+        candies.forEach { candy ->
+            candy.image?.let { FileManager.saveImage(context, imagesName + candy.id,it) }
+        }
     }
 }

@@ -4,16 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jpoveda.mydeliciouscandiesv2.R
 import com.jpoveda.mydeliciouscandiesv2.data.candy.Candy
 import kotlinx.android.synthetic.main.candy_item_adapter.view.*
-
-interface OnItemClickListener {
-    fun onItemClick(item: Candy)
-}
 
 class RecycleAdapter(context: Context, items: List<Candy>, listener: ((position: Int) -> Unit)) :
     RecyclerView.Adapter<RecycleAdapter.ViewHolder>() {
@@ -37,6 +34,7 @@ class RecycleAdapter(context: Context, items: List<Candy>, listener: ((position:
         val dulzorView: ProgressBar = view.progressBar2
         val tipoView: TextView = view.txtTipo
         val webView: TextView = view.txtWeb
+        val imageView : ImageView = view.imageView
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -46,6 +44,7 @@ class RecycleAdapter(context: Context, items: List<Candy>, listener: ((position:
         holder.dulzorView.progress = item.dulzor
         holder.tipoView.text = item.tipo
         holder.webView.text = item.web
+        holder.imageView.setImageBitmap(item.image)
 
         holder.webView.setOnClickListener(View.OnClickListener { listener.invoke(position) })
         //holder.itemView.setOnClickListener(View.OnClickListener { listener.invoke(position) })

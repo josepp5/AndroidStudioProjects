@@ -38,7 +38,6 @@ class RecycleAdapter(context: Context, items: List<Measurement>) :
 
         val layoutInflater = LayoutInflater.from(context)
         val view = layoutInflater.inflate(R.layout.measurement_item_adapter, parent, false)
-
         return ViewHolder(view)
     }
 

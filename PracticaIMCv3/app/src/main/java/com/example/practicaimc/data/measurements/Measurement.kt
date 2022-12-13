@@ -1,6 +1,8 @@
 package com.example.practicaimc.data.measurements
 
 data class Measurement(var date: String, val sexo: String, val result: Double, val rango: String, var peso: Double, var altura: Double) {
+
+
     override fun toString(): String {
         return "${date};${sexo};${result};${rango};${peso};${altura}"
     }

@@ -16,8 +16,8 @@ import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyMockDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.ICandyDataSource
 import kotlinx.android.synthetic.main.candy_list_fragment.*
 
-class CandyItemListTab : Fragment() {
-    var items: List<Candy> = ArrayList()
+class CandyItemListFragment : Fragment() {
+    var items: ArrayList<Candy> = ArrayList()
     lateinit var dataSource: ICandyDataSource
 
     override fun onCreateView(
@@ -25,8 +25,8 @@ class CandyItemListTab : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dataSource = CandyMockDataSource()
-        items = dataSource.getList()
+        dataSource = CandyFileDataSource(requireContext())
+        //dataSource = CandyMockDataSource()
         return inflater.inflate(R.layout.candy_list_fragment,container,false)
     }
 
@@ -34,6 +34,13 @@ class CandyItemListTab : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setListener()
         loadView()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        items = dataSource.getList() as ArrayList<Candy>
+        if (items != null) loadView(items) else loadView()
+
     }
 
     private fun loadView(candies: List<Candy> = dataSource.getList()) {
@@ -82,10 +89,6 @@ class CandyItemListTab : Fragment() {
     private fun filterBySweetness() {
         val sortedItemsList = items.sortedBy { it.dulzor }.reversed()
         loadView(sortedItemsList)
-    }
-
-    private fun filterByFav(){
-        
     }
 
     // Abrir una pagina WEB

@@ -7,18 +7,20 @@ import com.example.practicaimc.data.measurements.IMeasurementDataSource
 import com.example.practicaimc.data.measurements.Measurement
 import com.example.practicaimc.data.measurements.MeasurementFileDataSource
 import com.example.practicaimc.utils.CalendarHelper
+import com.example.practicaimc.utils.FileManager
 import com.example.practicaimc.utils.IMCCalculator
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
-    var items = ArrayList<Measurement>()
+    var items: ArrayList<Measurement> = ArrayList()
     val dataSource: IMeasurementDataSource = MeasurementFileDataSource(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setListener()
+        items = dataSource.getList() as ArrayList<Measurement>
     }
 
     // Aqui inicio las vistas
@@ -65,6 +67,7 @@ class MainActivity : AppCompatActivity() {
             val date = CalendarHelper.getFormattedDate()
             txtResultado.text = String.format("%.2f", resultado)
             val measurement = Measurement(date,sexo,resultado,rango)
+
             items.add(measurement)
             dataSource.saveElement(items)
         }

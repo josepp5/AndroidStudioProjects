@@ -8,9 +8,9 @@
     <string name="mujer">Mujer </string>
     <string name="hombre">Hombre </string>
     <string name="obesidad">Obesidad </string>
-    <string name="m">m</string>
+    <string name="cm">cm</string>
     <string name="kg">kg</string>
-    <string name="altura_m">Altura (m)</string>
+    <string name="altura_m">Altura (cm)</string>
     <string name="peso_kg">Peso (kg)</string>
 
 </resources>

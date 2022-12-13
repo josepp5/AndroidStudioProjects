@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Practica IMCv3</string>
+    <string name="app_name">MyDeliciousCandies</string>
     <string name="peso_inferior">Peso inferior al normal </string>
     <string name="peso_normal">Normal </string>
     <string name="sobrepeso">Sobrepeso </string>

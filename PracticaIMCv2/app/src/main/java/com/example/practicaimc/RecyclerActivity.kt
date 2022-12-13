@@ -35,3 +35,5 @@ class RecyclerActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 }
+
+

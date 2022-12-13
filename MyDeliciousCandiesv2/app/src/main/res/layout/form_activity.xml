@@ -12,10 +12,10 @@
 
         <TextView
             android:id="@+id/txtCandyName"
-            android:layout_width="118dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="108dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="124dp"
             android:text="Nombre"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,25 +24,25 @@
             android:id="@+id/editTxtWeb"
             android:layout_width="257dp"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="Web"
             android:inputType="textPersonName"
             android:text=""
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.246"
+            app:layout_constraintHorizontal_bias="0.311"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtWeb" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="109dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="72dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
             android:layout_marginEnd="27dp"
             android:text="Fabricante"
             app:layout_constraintEnd_toStartOf="@+id/editTxtFabricante"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.988"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtCandyName" />
 
@@ -74,14 +74,14 @@
 
         <TextView
             android:id="@+id/txtTipo"
-            android:layout_width="107dp"
-            android:layout_height="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="72dp"
             android:layout_marginEnd="25dp"
             android:text="Tipo"
             app:layout_constraintEnd_toStartOf="@+id/radioGroup"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.957"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -108,15 +108,17 @@
 
         </RadioGroup>
 
+
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="94dp"
-            android:layout_height="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="52dp"
             android:layout_marginEnd="38dp"
             android:text="Formato"
             app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -124,7 +126,7 @@
             android:id="@+id/radioGroup2"
             android:layout_width="192dp"
             android:layout_height="110dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.817"
             app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +145,6 @@
                 android:text="Bolsa" />
         </RadioGroup>
 
-
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="93dp"
@@ -156,12 +157,12 @@
 
         <TextView
             android:id="@+id/txtWeb"
-            android:layout_width="177dp"
-            android:layout_height="28dp"
-            android:layout_marginTop="52dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:text="Pagina web del fabricante"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintHorizontal_bias="0.192"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
@@ -169,10 +170,10 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="44dp"
             android:text="Nivel de Dulzor "
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintHorizontal_bias="0.197"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
@@ -181,12 +182,12 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="76dp"
             android:layout_height="50dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="28dp"
             android:autofillHints="0/5"
             android:hint="0/5"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.212"
+            app:layout_constraintHorizontal_bias="0.113"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
