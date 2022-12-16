@@ -27,4 +27,7 @@
     <string name="custom_dialog">Custom Dialog</string>
     <string name="time_picker_dialog">Time picker dialog</string>
     <string name="date_picker_dialog">Date picker Dialog</string>
+    <string name="DeleteDialog">¿Estas seguro que quieres borrar este Candy?</string>
+    <string name="DeleteDialogPositive">Candy eliminado correctamente</string>
+    <string name="DeleteDialogNegative">El Candy no se ha eliminado</string>
 </resources>

@@ -23,7 +23,7 @@ abstract class CandyMockDataSource() : ICandyDataSource {
         items.add(Candy(UUID.randomUUID(),"lacasitos", "kojac", 2, "Masticable", "Bolsa", "https://www.fiesta.es/producto/kojak",null))
         return items
     }
-    override fun saveElement(measurement: List<Candy>) {
+    override fun saveElements(candies: List<Candy>) {
         return
     }
 }

@@ -9,7 +9,7 @@ import java.io.File
 
 class CandyFileDataSource(context: Context) : ICandyDataSource {
     val imagesName: String = "candy"
-    val fileName = "candyList.txt"
+    val fileName = "candyList2.txt"
     val context: Context = context
 
     override fun getList(): List<Candy> {
@@ -26,7 +26,7 @@ class CandyFileDataSource(context: Context) : ICandyDataSource {
         }
     }
 
-    override fun saveElement(candies: List<Candy>) {
+    override fun saveElements(candies: List<Candy>) {
         val listOfStrings: List<String> = candies.map { it.toString() }
         FileManager.saveLinesInFile(context, fileName, listOfStrings)
         candies.forEach { candy ->

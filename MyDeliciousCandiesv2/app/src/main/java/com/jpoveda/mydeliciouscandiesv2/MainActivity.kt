@@ -3,6 +3,7 @@ package com.jpoveda.mydeliciouscandiesv2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jpoveda.mydeliciouscandiesv2.adapter.ViewPagerAdapter
+import com.jpoveda.mydeliciouscandiesv2.data.candy.CandyFileDataSource
 import com.jpoveda.mydeliciouscandiesv2.data.candy.ICandyDataSource
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         // Se añaden los fragments y los títulos de pestañas.
         adapter.addFragment(CandyItemListFragment(), "CandyItemList")
         adapter.addFragment(CandyForm(), "CandyForm")
+        //adapter.addFragment(CandyItemFragment(),"CandyItem")
 
         // Se asocia el adapter.
         viewPager.adapter = adapter

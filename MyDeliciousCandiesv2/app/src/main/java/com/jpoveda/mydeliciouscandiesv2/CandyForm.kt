@@ -81,7 +81,7 @@ class CandyForm : Fragment() {
 
             setPositiveButton(getString(R.string.dialog_button_positive)) { _, _ ->
                 items.add(candy)
-                dataSource.saveElement(items)
+                dataSource.saveElements(items)
 
                 Toast.makeText(
                     requireContext(),
@@ -99,6 +99,7 @@ class CandyForm : Fragment() {
         }
         alertDialog.show()
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

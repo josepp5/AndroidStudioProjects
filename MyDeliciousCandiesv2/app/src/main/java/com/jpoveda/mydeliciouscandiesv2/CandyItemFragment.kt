@@ -23,10 +23,10 @@ class CandyItemFragment(val dataSource: ICandyDataSource, val position: Int) : F
         savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(R.layout.candy_item_activity, container, false)
-        view.txtNombre.setText(items[position].name)
-        view.txtFabricanteInfo.setText(items[position].name)
-        view.txtFormatoInfo.setText(items[position].name)
-        view.txtTipoInfo.setText(items[position].name)
+        view.txtNombre.text = items[position].name
+        view.txtFabricanteInfo.text = items[position].name
+        view.txtFormatoInfo.text = items[position].name
+        view.txtTipoInfo.text = items[position].name
         //view.progressBar3.progress(items[position].dulzor)
         return  view
     }

@@ -14,10 +14,11 @@ data class Candy(
     val tipo: String,
     val formato: String,
     val web: String,
-    var image: Bitmap?
+    var image: Bitmap?,
+    var favorito: Boolean = false
 ) {
     override fun toString(): String {
-        return "${id};${name};${fabricante};${dulzor};${tipo};${formato};${web}"
+        return "${id};${name};${fabricante};${dulzor};${tipo};${formato};${web};${favorito}"
     }
 
     companion object {
@@ -31,7 +32,8 @@ data class Candy(
                 splittedString[4],
                 splittedString[5],
                 splittedString[6],
-                null
+                null,
+                splittedString[7] == "true",
             )
         }
     }

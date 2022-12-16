@@ -5,7 +5,5 @@ import java.io.File
 
 interface ICandyDataSource {
     fun getList(): List<Candy>
-    fun saveElement(candy: List<Candy>)
-    //fun saveImgElement(candies: List<String>)
-    //fun getImgList(): List<String>
+    fun saveElements(candy: List<Candy>)
 }

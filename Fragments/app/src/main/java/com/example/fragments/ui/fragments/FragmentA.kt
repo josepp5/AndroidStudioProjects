@@ -28,7 +28,7 @@ class FragmentA : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(R.layout.fragment_a, container, false)
-        view.textView.setText(name)
+        view.textView.text = name
         return  view
     }
 }
