@@ -2,16 +2,12 @@ package com.jpoveda.mydeliciouscandiesv2
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.drawToBitmap
@@ -52,13 +48,15 @@ class CandyForm : Fragment() {
         }
 
         btnAddPicA.setOnClickListener {
-            CameraForResult()
+            cameraForResult()
         }
     }
 
     fun CrearCandy() {
-        val rb = if (rbMasticable.isChecked) "Masticable" else if(rbChicle.isChecked) "Chicle" else "No se ha seleccionado tipo"
-        val rb2 = if (rbIndvidual.isChecked) "Individual" else if (rbBolsa.isChecked) "Bolsa" else "No se ha seleccionado formato"
+        val rb = if (rbMasticable.isChecked) getString(R.string.MasticableType) else if(rbChicle.isChecked) getString(
+                    R.string.ChicleFormat) else getString(R.string.NoTypeSelected)
+        val rb2 = if (rbIndvidual.isChecked) getString(R.string.IndividualType) else if (rbBolsa.isChecked) getString(
+                    R.string.BolsaFormat) else getString(R.string.NoFormatSelected)
         MakeDialog(
             Candy(
                 UUID.randomUUID(),
@@ -85,14 +83,14 @@ class CandyForm : Fragment() {
 
                 Toast.makeText(
                     requireContext(),
-                    "La informacion ha quedado registrada en el historico",
+                    getString(R.string.DialogAddCandyPositive),
                     Toast.LENGTH_LONG
                 ).show()
             }
             setNegativeButton(getString(R.string.dialog_button_negative)) { _, _ ->
                 Toast.makeText(
                     requireContext(),
-                    "La informacion no ha quedado registrada",
+                    getString(R.string.DialogAddCandyNegative),
                     Toast.LENGTH_LONG
                 ).show()
             }
@@ -112,7 +110,7 @@ class CandyForm : Fragment() {
         }
     }
 
-    private fun CameraForResult(){
+    private fun cameraForResult(){
         val intent = Intent(Intent(MediaStore.ACTION_IMAGE_CAPTURE))
         startActivityForResult(intent,124)
         PermissionManager().checkPermissionForResult(

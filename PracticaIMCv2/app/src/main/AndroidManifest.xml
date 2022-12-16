@@ -26,7 +26,5 @@
                 android:value="" />
         </activity>
         <activity android:name=".RecyclerActivity"/>
-
     </application>
-
 </manifest>

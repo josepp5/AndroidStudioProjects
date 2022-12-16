@@ -20,8 +20,8 @@
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:text="Nombre"
         app:layout_constraintStart_toEndOf="@+id/imgCandyB"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,20 +31,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="248dp"
         android:text="Nivel de dulzor : "
-        app:layout_constraintStart_toEndOf="@+id/imgCandyB"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
         android:text="Tipo : "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCandyB" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDulzor" />
 
     <TextView
         android:id="@+id/txtFabricante"
@@ -76,80 +76,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFormato" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:text="Volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="145dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imgCandyB"
-        app:layout_constraintTop_toBottomOf="@+id/txtDulzor" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="Favorito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtTipoInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:text=""
+        android:layout_marginTop="32dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toEndOf="@+id/txtTipo"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDulzor" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtFabricanteInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="69dp"
-        android:text=""
+        android:layout_marginTop="36dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toEndOf="@+id/txtFabricante"
         app:layout_constraintTop_toBottomOf="@+id/txtTipoInfo" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtFormatoInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text=""
+        android:layout_marginTop="48dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toEndOf="@+id/txtFormato"
         app:layout_constraintTop_toBottomOf="@+id/txtFabricanteInfo" />
 
-    <TextView
+    <EditText
         android:id="@+id/txtWebInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="79dp"
-        android:text=""
+        android:layout_marginTop="48dp"
         android:clickable="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.399"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toEndOf="@+id/txtWeb"
         app:layout_constraintTop_toBottomOf="@+id/txtFormatoInfo" />
 
@@ -162,4 +143,28 @@
         android:text="Add pic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgCandyB" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/imgCandyB"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+    <EditText
+        android:id="@+id/editTextDulzor"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+
+        app:layout_constraintStart_toEndOf="@+id/txtDulzor"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
 </androidx.constraintlayout.widget.ConstraintLayout>

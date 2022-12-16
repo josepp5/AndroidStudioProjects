@@ -14,12 +14,13 @@ import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     var items: ArrayList<Measurement> = ArrayList()
-    val dataSource: IMeasurementDataSource = MeasurementFileDataSource(this)
+    lateinit var dataSource: IMeasurementDataSource
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setListener()
+        dataSource = MeasurementFileDataSource(this)
         items = dataSource.getList() as ArrayList<Measurement>
     }
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         if (editTxtAltura.text.isEmpty() || editTxtPeso.text.isEmpty() || !ComprobarRb()) {
             Toast.makeText(
                 applicationContext,
-                "Los campos no deben estar vacios para poder realizar la operacion",
+                R.string.emptyFields,
                 Toast.LENGTH_SHORT
             ).show()
         } else {

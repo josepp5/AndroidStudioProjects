@@ -12,5 +12,8 @@
     <string name="kg">kg</string>
     <string name="altura_m">Altura (cm)</string>
     <string name="peso_kg">Peso (kg)</string>
+    <string name="rbHombre">Hombre</string>
+    <string name="rbMujer">Mujer</string>
+    <string name="emptyFields">Los campos no deben estar vacios para poder realizar la operacion</string>
 
 </resources>

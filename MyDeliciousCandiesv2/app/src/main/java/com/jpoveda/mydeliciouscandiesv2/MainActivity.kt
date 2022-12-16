@@ -23,8 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         // Se añaden los fragments y los títulos de pestañas.
         adapter.addFragment(CandyItemListFragment(), "CandyItemList")
+        // Formulario
         adapter.addFragment(CandyForm(), "CandyForm")
-        //adapter.addFragment(CandyItemFragment(),"CandyItem")
+        // En este queria hacer el modificar pero no lo llegue a conseguir
+        //adapter.addFragment(CandyItemFragment(0),"CandyItem")
 
         // Se asocia el adapter.
         viewPager.adapter = adapter
@@ -32,18 +34,4 @@ class MainActivity : AppCompatActivity() {
         // Se cargan las tabs.
         tabLayout.setupWithViewPager(viewPager)
     }
-
-    /*
-     private fun showItemFragment() {
-         val fragment = CandyItemActivity(dataSource,)
-         val bundle = Bundle()
-         bundle.putInt("position", 1)
-         fragment.arguments = bundle
-         val transaction = supportFragmentManager.beginTransaction()
-
-         transaction.replace(R.id.viewPager, fragment)
-         transaction.addToBackStack(null)
-         transaction.commit()
-         }
-     */
 }

@@ -4,12 +4,13 @@ import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
 import androidx.core.graphics.drawable.toDrawable
+import com.jpoveda.mydeliciouscandiesv2.R
 import com.jpoveda.mydeliciouscandiesv2.utils.FileManager
 import java.io.File
 
 class CandyFileDataSource(context: Context) : ICandyDataSource {
     val imagesName: String = "candy"
-    val fileName = "candyList2.txt"
+    val fileName = context.getString(R.string.FileName)
     val context: Context = context
 
     override fun getList(): List<Candy> {

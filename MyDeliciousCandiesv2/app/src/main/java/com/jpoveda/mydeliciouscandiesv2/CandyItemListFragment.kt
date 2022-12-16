@@ -74,16 +74,6 @@ class CandyItemListFragment : Fragment() {
         loadView(items)
     }
 
-    private fun goToDetail(position: Int) {
-        val frag = CandyItemFragment(dataSource, position)
-
-        val transaction = fragmentManager?.beginTransaction()
-        transaction?.replace(R.id.viewPager, frag)
-        transaction?.addToBackStack(null)
-
-        transaction?.commit()
-    }
-
     fun setListener() {
         btnFilter.setOnClickListener {
             if (radioFilterName.isChecked) filterByName()
@@ -121,12 +111,12 @@ class CandyItemListFragment : Fragment() {
     private fun openWeb(url: String) {
         val intent = Intent(
             Intent.ACTION_VIEW,
-            Uri.parse("https://" + url)
+            Uri.parse(getString(R.string.https) + url)
         )
         if (intent.resolveActivity(requireContext().packageManager) != null) {
             startActivity(intent)
         } else {
-            Log.d("DEBUG", "Hay un problema para encontrar un navegador.")
+            Log.d("DEBUG", getString(R.string.BrowserProblem))
         }
     }
 
@@ -154,6 +144,16 @@ class CandyItemListFragment : Fragment() {
             }
         }
         alertDialog.show()
+    }
+
+    private fun goToDetail(position: Int) {
+        val frag = CandyItemFragment(position)
+
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.viewPager, frag)
+        transaction.addToBackStack(null)
+
+        transaction.commit()
     }
 }
 

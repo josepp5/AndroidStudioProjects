@@ -30,4 +30,15 @@
     <string name="DeleteDialog">¿Estas seguro que quieres borrar este Candy?</string>
     <string name="DeleteDialogPositive">Candy eliminado correctamente</string>
     <string name="DeleteDialogNegative">El Candy no se ha eliminado</string>
+    <string name="https">https://</string>
+    <string name="BrowserProblem">Hay un problema para encontrar un navegador.</string>
+    <string name="FileName">candyList.txt</string>
+    <string name="MasticableType">Masticable</string>
+    <string name="IndividualType">Individual</string>
+    <string name="ChicleFormat">Chicle</string>
+    <string name="BolsaFormat">Bolsa</string>
+    <string name="NoTypeSelected">No se ha seleccionado tipo</string>
+    <string name="NoFormatSelected">No se ha seleccionado formato</string>
+    <string name="DialogAddCandyPositive">La informacion ha quedado registrada en el historico</string>
+    <string name="DialogAddCandyNegative">La informacion no ha quedado registrada</string>
 </resources>

@@ -49,7 +49,7 @@ class RecycleAdapter(context: Context, items: List<Candy>,
         val imageView : ImageView = view.imageView
         val btnDeleteView : Button = view.btnDelete
         val favoritoView : CheckBox = view.checkboxFav
-        val btnModifyView : Button = view.btnModify
+        //val btnModifyView : Button = view.btnModify
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -65,7 +65,7 @@ class RecycleAdapter(context: Context, items: List<Candy>,
         holder.webView.setOnClickListener(View.OnClickListener { listener.invoke(position) })
         holder.favoritoView.setOnClickListener(View.OnClickListener { listenerFavoritoClicked.invoke(position) })
         holder.btnDeleteView.setOnClickListener(View.OnClickListener { listenerDeleteClicked.invoke(position) })
-        holder.btnModifyView.setOnClickListener(View.OnClickListener { listenerModifyClicked.invoke(position) })
+        //holder.btnModifyView.setOnClickListener(View.OnClickListener { listenerModifyClicked.invoke(position) })
     }
 
 
