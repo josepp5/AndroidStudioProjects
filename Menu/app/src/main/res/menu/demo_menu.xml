@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/op01"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/op1"
+        app:showAsAction="always" />  <!-- Esto pone el item como pestaña del menu -->
+
+    <item
+        android:id="@+id/op02"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="@string/op2"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/op021"
+                android:title="@string/op21" />
+            <item
+                android:id="@+id/op022"
+                android:title="@string/op22" />
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/op03"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/op3"
+        app:showAsAction="ifRoom"/> <!-- Esto pone el item en el desplegable -->
+
+    <item
+        android:id="@+id/op04"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="@string/op4"
+        app:showAsAction="ifRoom"/>
+</menu>
