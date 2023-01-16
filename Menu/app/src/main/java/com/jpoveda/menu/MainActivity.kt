@@ -125,4 +125,3 @@ class MainActivity : AppCompatActivity() {
             ).show()
         }
     }
-}
