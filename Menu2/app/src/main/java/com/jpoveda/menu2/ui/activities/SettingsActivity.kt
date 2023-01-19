@@ -21,6 +21,6 @@ class SettingsActivity : AppCompatActivity() {
         transaction.addToBackStack(null)
 
         transaction.commit()
-        //isFragmentOneLoaded = false
+
     }
 }
